@@ -335,6 +335,8 @@ st.markdown("""
 
     /* ── Form inputs enhancements ── */
     .stTextInput input, .stNumberInput input, .stDateInput input {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
         border-radius: 8px !important;
         border: 1px solid #cbd5e1 !important;
         padding: 0.6rem 1rem !important;
@@ -343,6 +345,14 @@ st.markdown("""
     .stTextInput input:focus, .stNumberInput input:focus {
         border-color: #3b82f6 !important;
         box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+    }
+    
+    /* Force all widget labels to be dark and visible in the main area */
+    [data-testid="stWidgetLabel"] p {
+        color: #1e293b !important;
+        font-weight: 600 !important;
+        opacity: 1 !important;
+        font-size: 0.95rem !important;
     }
 
     /* ── Primary Form Buttons ── */
