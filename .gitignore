@@ -1,0 +1,11 @@
+# Database file — do not commit
+payroll.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Streamlit
+.streamlit/
