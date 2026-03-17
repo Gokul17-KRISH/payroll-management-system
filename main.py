@@ -53,19 +53,16 @@ st.markdown("""
                           radial-gradient(at 100% 0%, hsla(339,49%,30%,0.03) 0, transparent 50%);
     }
 
-    /* ── Main title banner (Glassmorphism + Dynamic Gradient) ── */
+    /* ── Main title banner (Premium Gradient) ── */
     .main-title {
-        background: linear-gradient(120deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
-        background-size: 200% auto;
-        animation: gradientBG 6s ease infinite;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1d4ed8 100%);
         border-radius: 16px;
-        padding: 2rem 2.5rem;
+        padding: 2.5rem;
         margin-bottom: 2.5rem;
         text-align: center;
-        color: white;
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
+        color: #ffffff;
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     @keyframes gradientBG {
@@ -138,14 +135,14 @@ st.markdown("""
     }
     .metric-card-label { 
         font-size: 0.85rem; 
-        color: #64748b; 
-        font-weight: 600; 
+        color: #475569; /* Darker gray for better contrast */
+        font-weight: 700; 
         text-transform: uppercase; 
         letter-spacing: 0.08em; 
     }
     .metric-card-value { 
         font-size: 2rem; 
-        font-weight: 700; 
+        font-weight: 800; 
         color: #0f172a; 
         margin-top: 5px; 
     }
@@ -244,13 +241,15 @@ st.markdown("""
 
     /* ── Sidebar styling ── */
     [data-testid="stSidebar"] { 
-        background: linear-gradient(180deg, #0f172a 0%, #1e293b 40%, #1e1b4b 100%);
-        border-right: 1px solid rgba(255,255,255,0.05);
-        box-shadow: 4px 0 25px rgba(0,0,0,0.15);
+        background: #0f172a !important; /* Solid dark blue for maximum contrast */
+        border-right: 1px solid rgba(255,255,255,0.1);
     }
     
-    [data-testid="stSidebar"] * {
-        color: rgba(255, 255, 255, 0.9) !important;
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+    [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+        color: #ffffff !important; /* Force all text to absolute white */
+        font-weight: 500 !important;
+        opacity: 1 !important;
     }
     
     [data-testid="stSidebar"] .block-container { 
@@ -284,9 +283,9 @@ st.markdown("""
     
     .sidebar-brand .subtitle { 
         font-size: 0.75rem; 
-        color: #94a3b8 !important; 
+        color: #3b82f6 !important; /* Brighter blue for visibility */
         margin-top:4px; 
-        font-weight: 600; 
+        font-weight: 700; 
         letter-spacing: 1.5px;
     }
     
@@ -314,11 +313,11 @@ st.markdown("""
     
     /* Reveal the text inside the radio button labels */
     [data-testid="stSidebar"] .stRadio [data-testid="stMarkdownContainer"] p {
-        font-size: 1rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.95) !important;
+        font-size: 0.95rem !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
         margin: 0;
-        padding-left: 5px;
+        padding: 8px 12px;
     }
     
     /* Make the selected radio item glow */
